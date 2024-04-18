@@ -1,4 +1,5 @@
 **Entities**
+
 User (userId, name, phoneNum)
 Buyer (userId)
 Seller (userId)
@@ -12,6 +13,7 @@ Order (orderNumber, creationTime, paymentStatus, totalAmount)
 Address (addrid, userid, name, city, postalCode, streetAddr, province, contactPhoneNumber)
 
 **Relationships**
+
 Manage (userid, sid, SetupTime) (userid ref Seller, sid ref Store)
 Save to Shopping Cart (userid, pid, quantity, addtime) (userid ref Buyer, pid ref Product)
 Contain (orderNumber, itemid, quantity) (orderNumber ref Order, itemid ref Order Item)
@@ -19,6 +21,7 @@ Deliver To (addrid, orderNumber, TimeDelivered) (addrid ref Address, orderNumber
 Payment (C.cardNumber, orderNumber, payTime) (C.cardNumber ref Credit Card, orderNumber ref Order)
 
 Create Database
+
 Table.sql: Create tables for entities and relationships above.
 Insert.sql: Insert datas into tables.
 Online Shopping Cart Database.sql: Modify the data.
